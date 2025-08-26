@@ -277,8 +277,8 @@ const Index = () => {
               <CardHeader>
                 <CardTitle>Article Summarizer</CardTitle>
               </CardHeader>
-              <CardContent className="space-y-4">
-                <div className="grid gap-4 md:grid-cols-2">
+              <CardContent className="space-y-6">
+                <div className="grid gap-4"> {/*md:grid-cols-2*/}
                   <Textarea
                     placeholder="Paste article text here..."
                     className="min-h-40"
@@ -287,7 +287,7 @@ const Index = () => {
                     aria-label="Article text"
                     maxLength={MAX_TEXT}
                   />
-                  <div className="space-y-2">
+                  {/* <div className="space-y-2">
                     <Input
                       placeholder="Or paste article URL (may be blocked by CORS)"
                       value={sourceUrl}
@@ -297,7 +297,7 @@ const Index = () => {
                       maxLength={2048}
                     />
                     <p className="text-xs text-muted-foreground">Tip: If URL fetch fails, paste the article text instead.</p>
-                  </div>
+                  </div> */}
                 </div>
                 <div className="flex gap-3">
                   <Button onClick={onSummarize} disabled={summarizing} variant="brand">
